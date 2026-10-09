@@ -33,7 +33,9 @@ This is the “wrap around”, like a clock going from 12 back to 0.
 ```
 
 
-## Example 1 (Without Overflow) 
+
+
+
 # Example 1: GF(2⁸) Multiplication Without Overflow
 
 **Problem:** compute `0x03 × 0x05` in GF(2⁸)
