@@ -26,9 +26,9 @@ module gf_mult_simple (
 
             // step 2: shift a left, wrap around if overflow
             if (a_tmp[7] == 1)
-                a_tmp = {a_tmp[6:0], 1'b0} ^ 8'h1D;   // overflow
+                a_tmp = {a_tmp[6:0], 1'b0} ^ 8'h1D;   // overflow (a_tmp = a_tmp << 1) ^ 8'h1D
             else
-                a_tmp = {a_tmp[6:0], 1'b0};           // no overflow
+                a_tmp = {a_tmp[6:0], 1'b0};           // no overflow  a_tmp = a_tmp << 1
 
             // step 3: next bit of b
             b_tmp = b_tmp >> 1;
