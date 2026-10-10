@@ -21,11 +21,11 @@ module gf_mult_simple (
 
         for (i = 0; i < 8; i = i + 1) begin
             // step 1: add (XOR) if the last bit of b is 1
-            if (b_tmp[0])
+            if (b_tmp[0] == 1)
                 p = p ^ a_tmp;
 
             // step 2: shift a left, wrap around if overflow
-            if (a_tmp[7])
+            if (a_tmp[7] == 1)
                 a_tmp = {a_tmp[6:0], 1'b0} ^ 8'h1D;   // overflow
             else
                 a_tmp = {a_tmp[6:0], 1'b0};           // no overflow
